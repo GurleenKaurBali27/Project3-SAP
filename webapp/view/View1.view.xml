@@ -1,0 +1,39 @@
+<mvc:View controllerName="project3.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Title id="_IDGenTitle1" text="Property Binding" />
+
+            <Input id="_IDGenInput"
+                value="{/newFruit}"
+                placeholder="Enter fruit name" />
+
+            <Button id="_IDGenButton"
+                text="Submit"
+                press="onSubmit" />
+
+                    <List id="_IDGenList"
+            headerText="Fruit List (Aggregate Binding)"
+            items="{/fruits}">
+
+            <CustomListItem id="_IDGenCustomListItem">
+                <HBox id="_IDGenHBox" justifyContent="SpaceBetween" width="100%" alignItems="Center">
+                    <Text id="_IDGenText" text="{name}" />
+
+                    <HBox id="_IDGenHBox1">
+                        <Button id="_IDGenButton2" icon="sap-icon://edit"
+                                type="Transparent"
+                                press="onEdit" />
+
+                        <Button id="_IDGenButton3" icon="sap-icon://delete"
+                                type="Transparent"
+                                press="onDelete" />
+                    </HBox>
+                </HBox>
+            </CustomListItem>
+
+        </List>
+        </content>
+    </Page>
+</mvc:View>
